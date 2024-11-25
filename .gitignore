@@ -1,0 +1,21 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Backup files created by Terraform
+*.tfstate.backup
+
+# Terraform variables file
+*.tfvars
+*.tfvars.json
+
+# Crash log files
+crash.log
+
+# Ignore directories created by Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Ignore sensitive files (e.g., credentials)
+*.key
+*.pem
