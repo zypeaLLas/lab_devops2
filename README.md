@@ -6,12 +6,13 @@
 | 3   | Nguyễn Hoàng Diệp Phi|21522453  |
 
 # Trước khi chạy source cần cấu hình aws credentials : #
-   - Trên terminal nhập : `aws configure` 
-    rồi cung cấp access + secret key 
-- Sử dụng mail giảng viên hướng dẫn được cấp quyền mới truy cập được file credentials : https://drive.google.com/file/d/1YLf-f6ByiCqeqF4T0g3E9m-8-4EXBeKi/view?usp=drive_link 
-# Script chạy source code terraform: #
 
-`terraform init -> terraform fmt -> terraform validate -> terraform plan -> terraform apply -> yes`
+- Trên github vào repo -> settings -> secret variables -> Cung cấp aws access key, secret key và session key của tài khoản aws student, mỗi phiên làm việc trên aws academy chỉ có 5 giờ và sẽ phải cung cấp lại key mới sau mỗi phiên làm việc.
+- terraform -> variables.tf : sửa aws access key, secret key và session key được cung cấp trên awsacademy
+# Câu 1: #
+- Sau khi cấu hình file aws.yml, Để test github action có hoạt động không, thực hiện git push rồi theo dõi quá trình deploy ở mục Actions
+- Ví dụ :  ![image](https://github.com/user-attachments/assets/8c45963e-44c8-4e63-8bf5-d3bce1c2709f)
+
 
 # Triển khai dùng cloudformation #
  - upload file yaml lên aws cloudformation -> add a tag Name -> Next triển khai
