@@ -81,3 +81,15 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
       working-directory: ./Terraform
+
+    - name: Save Terraform State and Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: terraform-state
+        path: |
+          .terraform/
+          .terraform.lock.hcl
+          terraform.tfstate
+          terraform.tfstate.backup
+        working-directory: ./Terraform
+    
